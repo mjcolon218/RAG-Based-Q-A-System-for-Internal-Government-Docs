@@ -68,8 +68,8 @@ Ask natural language questions over internal policy PDFs and get smart answers w
 
 1. **Clone the repo**
 ```bash
-git clone https://github.com/mjcolon218/RAG-Based Q&A System for Internal Government Docs.git
-cd RAG-Based Q&A System for Internal Government Docs
+git clone https://github.com/RAG-Based-Q-A-System-for-Internal-Government-Docss.git
+cd RAG-Based-Q-A-System-for-Internal-Government-Docs
 ```
 
 2. **Install dependencies**
