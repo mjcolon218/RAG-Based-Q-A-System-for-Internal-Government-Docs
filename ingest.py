@@ -11,6 +11,7 @@ INDEX_PATH = "./faiss_index"
 load_dotenv()
 #print(os.getenv("OPENAI_API_KEY")) 
 api_key = os.getenv("OPENAI_API_KEY")
+
 #OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
@@ -49,7 +50,7 @@ def ingest_all_pdfs():
             metadatas.extend([{"source": filename}] * len(chunks))
 
     print(f"🧠 Total chunks to embed: {len(texts)}")
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(api_key=api_key)
     vectorstore = FAISS.from_texts(texts, embedding=embeddings, metadatas=metadatas)
     vectorstore.save_local(INDEX_PATH)
     print(f"✅ Vector store saved at: {INDEX_PATH}")
